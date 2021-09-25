@@ -1,23 +1,21 @@
 # hexaforce-ktor
 
 
-## swagger
+## openapi
 ```
 brew install swagger-codegen
+
+openapi-generator list
+
+openapi-generator generate -i openapi/api.yaml -g kotlin-server -o out 
+openapi-generator generate -i openapi/api.yaml -g markdown -o out 
+
+
 ```
 
-swagger-codegen generate 
 ## prism
 ```
 npm install -g @stoplight/prism-cli
 
-prism  mock swagger/api.yaml
+prism mock openapi/api.yaml
 ```
-
-  -l, --lang             client language to generate (maybe class name in classpath, required)
-  -o, --output           where to write the generated files (current dir by default)
-  -i, --input-spec       location of the swagger spec, as URL or file (required)
-  -t, --template-dir     folder containing the template files
-  --api-package          package for generated api classes
-  --model-package        package for generated models
-
