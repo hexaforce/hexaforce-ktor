@@ -7,9 +7,9 @@ brew install swagger-codegen
 
 openapi-generator list
 openapi-generator help generate
-openapi-generator generate -i openapi/api.yaml -g kotlin-server -o out 
-openapi-generator generate -i openapi/api.yaml -g ktorm-schema -o out 
-openapi-generator generate -i openapi/api.yaml -g markdown -o out 
+openapi-generator generate -i openapi/api.yaml -g kotlin-server -o kotlin-server --package-name io.hexaforce
+openapi-generator generate -i openapi/api.yaml -g ktorm-schema -o ktorm-schema --package-name io.hexaforce
+
 ```
 
 ## prism
